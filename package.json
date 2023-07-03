@@ -1,6 +1,6 @@
 {
   "name": "manager-monorepo",
-  "packageManager": "yarn@3.6.0",
+  "packageManager": "yarn@3.6.1",
   "scripts": {
     "manager-web:dev": "yarn workspace manager-web run dev",
     "manager-web:prod": "yarn workspace manager-web run build && yarn workspace manager-web run start"

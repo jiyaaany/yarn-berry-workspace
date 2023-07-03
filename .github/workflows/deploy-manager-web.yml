@@ -1,0 +1,51 @@
+name: Deploy Manager Web
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/manager-web/**'
+  workflow_dispatch:
+
+env:
+  S3_BUCKET_NAME: manager-frontend-staging-s3
+  CODE_DEPLOY_APPLICATION_NAME: manager-frontend-staging-cd
+  CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: manager-frontend-staging-group
+
+
+jobs:
+  build_and_deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@master
+
+      - name: Install Dependencies
+        run: yarn workspace manager-web install --immutable --immutable-cache
+
+      - name: Build Next App
+        run: yarn workspace manager-web build
+
+      - name: Make Zip File
+        run: zip -r ./$GITHUB_SHA.zip ./packages/manager-web/.next
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+
+      - name: Upload to S3
+        run: aws s3 cp --region ap-northeast-2 ./packages/manager-web/$GITHUB_SHA.zip s3://$S3_BUCKET_NAME/$GITHUB_SHA.zip
+
+      - name: Code Deploy
+        run: |
+          aws deploy create-deployment \
+          --deployment-config-name CodeDeployDefault.AllAtOnce \
+          --application-name ${{ env.CODE_DEPLOY_APPLICATION_NAME }} \
+          --deployment-group-name ${{ env.CODE_DEPLOY_DEPLOYMENT_GROUP_NAME }} \
+          --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=$GITHUB_SHA.zip
