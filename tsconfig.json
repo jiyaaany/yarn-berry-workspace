@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "references": [
+    {
+      "path": "packages/manager-web",
+    }
+  ],
+  "exclude": [
+    "node_modules",
+    "packages/**/dist/**"
+  ]
+}

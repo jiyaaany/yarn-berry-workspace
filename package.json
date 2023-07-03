@@ -1,0 +1,15 @@
+{
+  "name": "manager-monorepo",
+  "packageManager": "yarn@3.6.0",
+  "scripts": {
+    "manager-web:dev": "yarn workspace manager-web run dev",
+    "manager-web:prod": "yarn workspace manager-web run build && yarn workspace manager-web run start"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.6"
+  }
+}
