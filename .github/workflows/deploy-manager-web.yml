@@ -28,7 +28,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install Dependencies
-        run: yarn workspace manager-web install --immutable --immutable-cache
+        run: yarn workspace manager-web install
 
       - name: Build Next App
         run: yarn workspace manager-web build
