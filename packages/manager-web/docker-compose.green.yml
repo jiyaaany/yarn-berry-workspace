@@ -1,8 +1,0 @@
-# blue
-version: '3'
-services:
-  nextjs:
-    build: ./
-    restart: unless-stopped
-    ports:
-      - "3002:3000"
