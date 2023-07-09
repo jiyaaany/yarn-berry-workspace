@@ -1,0 +1,29 @@
+{
+  "name": "@packages/core-ui",
+  "packageManager": "yarn@3.6.1",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build:dts": "tsc --build tsconfig.build.json",
+    "build:js": "node ./esbuild.config.js",
+    "build": "yarn build:dts && yarn build:js",
+    "build:dev": "yarn build:js --watch & yarn build:dts --watch"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "esbuild": "^0.18.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,7 +1,10 @@
 {
   "name": "manager-monorepo",
   "packageManager": "yarn@3.6.1",
+  "private": true,
   "scripts": {
+    "coreui": "yarn workspace @packages/core-ui",
+    "web": "yarn workspace manager-web",
     "manager-web:dev": "yarn workspace manager-web run dev",
     "manager-web:prod": "yarn workspace manager-web run build && yarn workspace manager-web run start"
   },
