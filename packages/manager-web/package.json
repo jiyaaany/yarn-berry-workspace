@@ -1,5 +1,6 @@
 {
   "name": "manager-web",
+  "packageManager": "yarn@3.6.1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,13 +10,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@packages/core-ui": "workspace:*",
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "next": "13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.1.6",
-    "@packages/coreui": "workspace:."
+    "typescript": "5.1.6"
   }
 }

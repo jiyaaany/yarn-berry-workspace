@@ -1,1 +1,0 @@
-# manager-web
