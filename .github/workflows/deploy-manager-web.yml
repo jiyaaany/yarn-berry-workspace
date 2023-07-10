@@ -31,10 +31,10 @@ jobs:
         run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Build Next App
-        run: yarn workspace manager-web2 build
+        run: yarn web build
 
       - name: Make Zip File
-        run: zip -r ./$GITHUB_SHA.zip ./packages/manager-web2/.next
+        run: zip -r ./$GITHUB_SHA.zip ./packages/manager-web/.next
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
