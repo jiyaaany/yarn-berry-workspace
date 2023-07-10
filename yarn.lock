@@ -1812,18 +1812,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"manager-web2@workspace:packages/manager-web2":
-  version: 0.0.0-use.local
-  resolution: "manager-web2@workspace:packages/manager-web2"
-  dependencies:
-    "@types/react": ^18
-    "@types/react-dom": ^18
-    next: ^13.4.9
-    react: ^18.2.0
-    react-dom: ^18.2.0
-  languageName: unknown
-  linkType: soft
-
 "manager-web@workspace:packages/manager-web":
   version: 0.0.0-use.local
   resolution: "manager-web@workspace:packages/manager-web"
@@ -1895,7 +1883,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:13.4.9, next@npm:^13.4.9":
+"next@npm:13.4.9":
   version: 13.4.9
   resolution: "next@npm:13.4.9"
   dependencies:

@@ -22,10 +22,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "manager-web",\
         "reference": "workspace:packages/manager-web"\
-      },\
-      {\
-        "name": "manager-web2",\
-        "reference": "workspace:packages/manager-web2"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -33,8 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["@packages/core-ui", ["workspace:packages/core-ui"]],\
       ["manager-monorepo", ["workspace:."]],\
-      ["manager-web", ["workspace:packages/manager-web"]],\
-      ["manager-web2", ["workspace:packages/manager-web2"]]\
+      ["manager-web", ["workspace:packages/manager-web"]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -2254,20 +2249,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:dd5e1139a0bd2c1cebba2541aae9ce091a937974ae5e1810cd5d5dcca7090ee542941432b4ad91a2701f3c7ead32b8aeb165312d43c1a300e560dca640ec3d85#npm:18.2.0"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["manager-web2", [\
-        ["workspace:packages/manager-web2", {\
-          "packageLocation": "./packages/manager-web2/",\
-          "packageDependencies": [\
-            ["manager-web2", "workspace:packages/manager-web2"],\
-            ["@types/react", "npm:18.2.14"],\
-            ["@types/react-dom", "npm:18.2.6"],\
-            ["next", "virtual:cb74966d2b821bba9589b45c1361f7c104dbba15b36a05aaeac43cdffc940b4df303029a785b92dc5e70bab533fcbe3c8a693da6fc528d77945047e48410cdcc#npm:13.4.9"],\
-            ["react", "npm:18.2.0"],\
-            ["react-dom", "virtual:dd5e1139a0bd2c1cebba2541aae9ce091a937974ae5e1810cd5d5dcca7090ee542941432b4ad91a2701f3c7ead32b8aeb165312d43c1a300e560dca640ec3d85#npm:18.2.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
