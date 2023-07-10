@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/manager-web
+permissions:
+  - object: /home/ubuntu/manager-web
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
