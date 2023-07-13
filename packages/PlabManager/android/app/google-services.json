@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "745186567998",
+    "project_id": "plab-manager",
+    "storage_bucket": "plab-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745186567998:android:574b7242217ac6c5326e6f",
+        "android_client_info": {
+          "package_name": "com.plabmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745186567998-1abqo6qmn1qeto59br5qct4f715d96of.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.plabmanager",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "745186567998-r4caqqmftmhmdc9gjsogn0fek750mm9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmg5mvfETKC-JIphxKdA6YFsJxVM4G3yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745186567998-r4caqqmftmhmdc9gjsogn0fek750mm9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
