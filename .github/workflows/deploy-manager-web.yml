@@ -36,7 +36,7 @@ jobs:
         run: yarn web build
 
       - name: Make Zip File
-        run: zip -r ./$GITHUB_SHA.zip ./packages/manager-web/.next
+        run: zip -r ./$GITHUB_SHA.zip ./packages/manager-web
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
