@@ -2,12 +2,10 @@ import React from 'react';
 
 import Image from 'next/image';
 import styles from './page.module.css';
-import { Button } from '@packages/core-ui';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Button>Click me!</Button>
 
       <div className={styles.center}>
         <Image
