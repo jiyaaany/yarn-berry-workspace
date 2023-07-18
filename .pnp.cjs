@@ -15915,6 +15915,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/manager-web/",\
           "packageDependencies": [\
             ["manager-web", "workspace:packages/manager-web"],\
+            ["@packages/core-ui", "workspace:packages/core-ui"],\
             ["@types/node", "npm:20.4.1"],\
             ["@types/react", "npm:18.2.14"],\
             ["@types/react-dom", "npm:18.2.6"],\
