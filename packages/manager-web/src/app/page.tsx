@@ -2,6 +2,7 @@ import React from 'react';
 
 import Image from 'next/image';
 import styles from './page.module.css';
+import { Button } from '@packages/core-ui';
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
           priority
         />
       </div>
+
+      <Button>대나무 헬리콥터</Button>
 
       <div className={styles.grid}>
         <a
